@@ -1,0 +1,39 @@
+@charset "utf-8";
+/*
+  grid system을 위한 style sheet normalize css는 공통으로 사용하기위해 base/normalize.css 사용
+*/
+@import "base/normalize.css";
+
+/* ============ grid system 작성 ======== */
+
+// ] mixin [
+@mixin rowLine($numRow, $margin){
+  width: ((100% - (($numRow - 1) * $margin)) / $numRow);
+  &:nth-child(n){
+    margin-bottom: $margin;
+    margin-right:$margin;
+  }
+  &:nth-child(#{$numRow}n){
+    margin-right:0; margin-bottom:0;
+  }
+}
+$primary:lightpink;
+$font:#333333;
+
+// style sheet
+.cafe{
+  @at-root body{font-size:0;}
+  @include rowLine(5,2%);
+  display: inline-block;
+  vertical-align: top;
+  background:$primary;
+
+  p{
+    font-size:16px;
+    color:$font;
+    text-align:center;
+  }
+  @media (max-width:1200px){@include rowLine(4,2%);}
+  @media (max-width:900px){@include rowLine(3,4%);}
+  @media (max-width:720px){@include rowLine(2,5%);}
+}

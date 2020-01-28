@@ -1,0 +1,52 @@
+@charset "UTF-8";
+/*
+  grid system을 위한 style sheet normalize css는 공통으로 사용하기위해 base/normalize.css 사용
+*/
+@import url(base/normalize.css);
+/* ============ grid system 작성 ======== */
+.cafe {
+  width: 18.4%;
+  display: inline-block;
+  vertical-align: top;
+  background: lightpink; }
+  body {
+    font-size: 0; }
+  .cafe:nth-child(n) {
+    margin-bottom: 2%;
+    margin-right: 2%; }
+  .cafe:nth-child(5n) {
+    margin-right: 0;
+    margin-bottom: 0; }
+  .cafe p {
+    font-size: 16px;
+    color: #333333;
+    text-align: center; }
+  @media (max-width: 1200px) {
+    .cafe {
+      width: 23.5%; }
+      .cafe:nth-child(n) {
+        margin-bottom: 2%;
+        margin-right: 2%; }
+      .cafe:nth-child(4n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
+  @media (max-width: 900px) {
+    .cafe {
+      width: 30.6666666667%; }
+      .cafe:nth-child(n) {
+        margin-bottom: 4%;
+        margin-right: 4%; }
+      .cafe:nth-child(3n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
+  @media (max-width: 720px) {
+    .cafe {
+      width: 47.5%; }
+      .cafe:nth-child(n) {
+        margin-bottom: 5%;
+        margin-right: 5%; }
+      .cafe:nth-child(2n) {
+        margin-right: 0;
+        margin-bottom: 0; } }
+
+/*# sourceMappingURL=grid.css.map */
