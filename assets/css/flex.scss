@@ -1,0 +1,27 @@
+@charset "utf-8";
+@import "base/normalize.css";
+/*] flex layout [*/
+section{margin-top:50px;}
+h2{margin-bottom:30px;}
+.z{display:inline-flex;width:99px;height:99px;outline:5px solid rgba(0,0,0,.5);color:white;vertical-align:top;}
+.z>*{flex:0 0 33px;}
+.z>:nth-child(1){background:orange;}
+.z>:nth-child(2){background:red;}
+.z>:nth-child(3){background:green;}
+.z>:nth-child(4){background:blue;}
+
+.a{flex-flow:row nowrap;}
+.b{flex-flow:row wrap;}
+.c{flex-flow:row wrap-reverse;}
+
+.d{flex-flow:row-reverse nowrap;}
+.e{flex-flow:row-reverse wrap;}
+.f{flex-flow:row-reverse wrap-reverse;}
+
+.g{flex-flow:column nowrap;}
+.h{flex-flow:column wrap;}
+.i{flex-flow:column wrap-reverse;}
+
+.j{flex-flow:column-reverse nowrap;}
+.k{flex-flow:column-reverse wrap;}
+.l{flex-flow:column-reverse wrap-reverse;}
